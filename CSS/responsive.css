@@ -1,0 +1,404 @@
+@media only screen and (min-width:800px) and (max-width:1100px) {
+
+
+
+
+    .music-container {
+        width: 55%;
+        text-align: center;
+    }
+
+    .songlistgif {
+        width: 16%;
+        margin: 0px 3px 0px 0px;
+    }
+
+    .songName {
+        padding: 0px 5px;
+    }
+
+    .container {
+        width: 95vw;
+    }
+}
+
+
+@media only screen and (min-width:500px) and (max-width:800px) {
+
+
+
+    .container {
+
+
+
+        width: 97vw;
+        background-size: 100%;
+        background-position: bottom;
+
+    }
+
+
+    .music-container {
+        width: 55%;
+        text-align: center;
+    }
+
+    .songlistgif {
+        width: 16%;
+        margin: 0px 3px 0px 0px;
+    }
+
+    .songName {
+        padding: 0px 5px;
+    }
+
+    #music-Timmer {
+        order: 5;
+    }
+
+    .icon {
+        order: 4;
+    }
+
+    .botton_item {
+        width: 98%;
+    }
+
+
+    #gif {
+        width: 50px;
+    }
+
+    .duration {
+        font-size: 1.1rem;
+    }
+
+    .mucis-name {
+        font-size: 1.1rem;
+        margin-left: 0px;
+    }
+
+    .musicnamebox {
+        width: 25%;
+    }
+
+    .icon img {
+        width: 29px;
+        padding: 0px 2px;
+    }
+
+
+
+    #music-Timmer {
+
+        font-size: 1.1rem;
+    }
+
+    .music-container {
+        width: 59%;
+
+    }
+
+    .songName {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (min-width:370px) and (max-width:530px) {
+
+
+    .container {
+        width: 97vw;
+        background-image: none;
+        background-color: black;
+
+    }
+
+
+
+
+    .songlistgif {
+        width: 16%;
+        margin: 0px 3px 0px 0px;
+    }
+
+
+
+    #music-Timmer {
+        order: 5;
+    }
+
+    .icon {
+        order: 4;
+    }
+
+    .botton_item {
+        width: 98%;
+    }
+
+    .gifbox {
+        width: 10%;
+    }
+
+    #gif {
+        width: 100%;
+
+    }
+
+    .duration {
+        font-size: .9rem;
+        margin: 0;
+    }
+
+    .mucis-name {
+        font-size: .9rem;
+        margin-left: 0px;
+    }
+
+    .musicnamebox {
+        width: 30%;
+    }
+
+    .icon img {
+        width: 19px;
+        padding: 0px 2px;
+        margin-left: 5px;
+    }
+
+
+    #music-Timmer {
+
+        font-size: .9rem;
+    }
+
+    .music-container {
+        width: 96%;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .songbox {
+        padding: 1px 14px;
+    }
+
+    .songName {
+        font-size: 1rem;
+        padding: 0px 5px;
+    }
+
+    #previous-button {
+        margin: 0;
+    }
+
+    .navigation ul li a {
+        margin-left: 0.6rem;
+        font-size: .9rem;
+    }
+
+    .logoname {
+        font-size: 1.1rem;
+    }
+
+    .navigation img {
+        width: 9%;
+    }
+
+    .music-container h1 {
+        font-size: 1.9rem;
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width:0px) and (max-width:400px) {
+    body {
+        background-color: blue;
+    }
+
+    * {
+        text-align: center;
+    }
+
+ 
+
+
+
+
+    .songlistgif {
+        width: 9%;
+        margin: 0px 3px 0px 0px;
+    }
+
+
+
+    #music-Timmer {
+        order: 5;
+    }
+
+    .icon {
+        order: 4;
+    }
+
+    .botton_item {
+        width: 98%;
+    }
+
+    .gifbox {
+        width: 10%;
+    }
+
+    #gif {
+        width: 100%;
+
+    }
+
+    .duration {
+        font-size: .9rem;
+        margin: 0;
+    }
+
+
+
+
+
+
+
+    .icon img {
+        width: 19px;
+        padding: 0px 2px;
+        margin-left: 5px;
+    }
+
+
+    #music-Timmer {
+
+        font-size: .9rem;
+    }
+
+    .music-container {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .songbox {
+        padding: 1px 0px;
+        width: 96%;
+        justify-content: space-between;
+    }
+
+    .songName {
+        
+        font-size: .9rem;
+    padding: 0px 0px;
+    font-weight: bolder;
+    }
+    .songbox .cover_image {
+        width: 9%;
+    }
+
+    #previous-button {
+        margin: 0;
+    }
+
+    .navigation ul li a {
+        margin-left: 0.6rem;
+        font-size: .9rem;
+    }
+
+    .logoname {
+        font-size: 1.1rem;
+    }
+
+    .navigation img {
+        width: 9%;
+    }
+
+    .music-container h1 {
+        font-size: 1.9rem;
+    }
+
+
+    .bottom {
+        position: relative;
+
+    }
+
+    .mucis-name {
+        font-size: .9rem;
+        margin-left: 0px;
+        position: absolute;
+        top: 82px;
+        left: 6px;
+    }
+
+    .musicnamebox {
+        width: 0;
+    }
+
+ 
+    .header {
+        padding: 20px 0px;
+        background: rgb(64, 149, 228);
+    }
+
+    .navigation_button {
+        outline: 2px solid green;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 5px;
+        top: 10px;
+
+    }
+   .navigation{
+  
+    display: none;
+   
+    margin-top: 25px;
+    flex-direction: column;
+  
+   }
+    .res-navigation {
+         display: flex;
+       
+         height: 150px;
+    
+        
+        transition:  all 0.2s ease-in;
+        
+    }
+
+    .navigation_button div {
+        display: inline-block;
+        width: 20px;
+        padding: 2px 2px;
+        background: white;
+        margin: 1px;
+    }
+
+
+    .navigation ul {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+ 
+
+
+    .navigation ul li a{
+        margin: 5px auto
+    }
+    .container {
+        width: 97vw;
+        background-image: none;
+        background-color: black;
+        min-height: calc( 100vh - 104px - 20px);
+    }
+}

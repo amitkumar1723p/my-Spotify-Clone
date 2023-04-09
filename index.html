@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clone by Spotify</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/responsive.css">
+        <!-- <link rel="stylesheet" media="Screen and (min-width:0px) and (max-width:870px)" href="CSS/responsive2.css"> -->
+
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="navigation_button">
+                <div> </div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav class="navigation">
+                <img src="logo.png" alt="logo-image">
+                <span class="logoname">Spotify</span>
+
+            </nav>
+        </header>
+
+        <!-- Sotore music in container -->
+        <div class="container">
+            <div class="music-container">
+                <h1>Music By Spotify</h1>
+                <div class="songlist">
+
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">sultang movie top music</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="0">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 2</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="1">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 3</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="2">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 4</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="3">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 5</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="4">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 6</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="5">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 7</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="6">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 8</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="7">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 9</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="8">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 10</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="9">
+                    </div>
+                    <div class="songbox">
+                        <img src="covers/1.jpg" alt="coverimage" class="cover_image">
+                        <span class="songName">Song 11</span>
+                        <img src="playing.gif" alt="" class="songlistgif">
+                        <img src="icons/playbutton.svg" alt="" width="20px" class="small-play-button" id="10">
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- Play Mucis im bottom -->
+        <div class="bottom">
+
+
+            <div class="progressbarbox">
+                <input type="range" name="range" id="progressbar" value="0" min="0" max="100">
+            </div>
+
+            <div class="bottom_item">
+                <div class="gifbox">
+                    <img src="playing.gif" alt="gif" id="gif">
+                </div>
+
+
+
+                <div class="duration">
+                    <span id="Add-zero-min"></span><span class="minues">0</span>:<span id="Add-zero-sec"></span><span
+                        class="second">0</span>
+                </div>
+
+                <div class="icon">
+                    <img src="icons/Previous button.svg" alt="Previous-button" id="previous-button">
+                    <img src="icons/playbutton.svg" alt="play-button" id="allmusicplay_btn">
+                    <img src="icons/nex button.svg" alt="next-button" id="next-button">
+                </div>
+
+                <div class="musicnamebox">
+                    <span class="mucis-name">Spotify music supriction</span>
+                </div>
+
+
+                <div id="music-Timmer">
+
+                    <span id="minutes_zero"></span><span id="music-timmer-minutes">0</span>:
+                    <span id="second_zero"></span><span id="music-timmer-second-seconds">0</span>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <script src="JAVASCRIPT FILE/script.js"></script>
+        <audio src=""></audio>
+    </body>
+
+</html>

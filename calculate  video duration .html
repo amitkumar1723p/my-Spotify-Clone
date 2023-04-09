@@ -1,0 +1,524 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate video duration in javascript"></video></title>
+</head>
+<body>
+    <video src="फिर-सबकुछ-आसान-हो-जायेगा-sandeep-maheshwari-status-🔥।sandeep-maheshwari-status-for-whatsapp।-1.mp4" width="50%" height="560px" controls id="vid"></video>
+     <p style="background:black; color:white; width:50%;" 
+><span id="duration">00:00</span></p>
+ <button id="button"> audio</button>
+ 
+<script>
+    // let audio=new Audio('Songs/song 1.mp3')
+ let d=   document.getElementById('vid')
+ let e=document.getElementById('duration')
+  let m;
+  let s;
+  
+       let button=document.getElementById('button')
+       button.addEventListener('click',function(){
+        console.log('click the audio button')
+        // console.log(d.duration)
+        let math =Math.floor(d.duration)
+        s=math
+        m=s/60;
+        if(s<10){
+  e.innerHTML=m+':'+'0'+math
+        }else{
+
+            e.innerHTML=Math.floor(m)+':'+ math
+        }
+    // console.log( audio.duration)
+    console.log(math)
+
+       }) -->
+<!-- </script>
+</body  >
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <button id="durationbtn">duration </button>
+        <span id="minutes_zero"></span><span id="minues">00</span>:
+        <span id="second_zero"></span><span id="second">00</span>
+        <button id="pause">pause</button>
+
+
+        <script>
+            let min = document.getElementById('minues')
+            let sec = document.getElementById('second')
+            let minutes_zero = document.getElementById('minutes_zero')
+            let second_zero = document.getElementById('second_zero')
+            console.log(minutes_zero, second_zero)
+
+            console.log(min, sec)
+            
+            let audio = new Audio('Songs/song 5.mp3')
+            let a=true
+
+ 
+     
+              
+
+            
+                 
+            
+            
+            
+            
+            
+            
+            function name(){
+
+                if (sec.innerText == 0 && min.innerText == 0) {
+
+       
+                    audio.play()
+                    let minutes = Math.floor(audio.duration / 60)
+                    let second = Math.floor(audio.duration - minutes * 60)
+                    min.innerText = minutes
+                    sec.innerText = second
+
+                    myInterval = setInterval(() => {
+
+                        if (sec.innerText > 0) {
+
+                            sec.innerText--
+
+                        }
+                        else {
+                            sec.innerText--
+                            sec.innerText = 59
+
+                            minutefunction()
+                            
+                        }
+            
+                    }, 1000);
+                        
+
+
+
+
+                }
+
+                else {
+               
+                    myname = setInterval(() => {
+                        if (sec.innerText > 0) {
+
+                                sec.innerText--
+                              
+                       
+                        }
+                        else {
+                            
+                            sec.innerText = 59
+                            sec.innerText--
+                            minutefunction()
+                        }
+                       
+
+                        //  setTimeout(() => {
+                    
+                        // },500);
+
+
+
+                
+
+
+                
+                    }, 1000);
+
+                    audio.play()
+                }
+
+                 
+                 
+                   setInterval(() => {
+                    
+                       if (sec.innerText< 10) {
+                           
+                           second_zero.innerText = 0
+                          
+                           second_zero.style.display = 'inline'
+                        }
+                        else {
+                            second_zero.style.display = 'none'
+                            
+                        }
+                        
+                        
+                        
+                        
+                        if (min.innerText < 10) {
+                            minutes_zero.innerText = 0
+                           
+                            minutes_zero.style.display = 'inline'
+                        }
+                        else {
+                            minutes_zero.style.display = 'none'
+                            
+                        } 
+                    },0);
+                   
+
+                  setInterval(() => {
+                    
+                      if(sec.innerText>0){
+                      
+                        }else{
+                           
+                        }
+                    }, 0);
+                   
+
+
+            }
+    
+            // -=-=-=--=-
+            let pause = document.getElementById('pause')
+            
+            pause.addEventListener('click', function () {
+                a=true
+                audio.pause()
+                 console.log('amit')
+                clearInterval(myInterval)
+                clearInterval(myname)
+              console.log(a)
+            })
+
+            
+            
+
+            function minutefunction() {
+                if (min.innerText != 0) {
+
+                    min.innerText--
+                    console.log('if condition')
+
+                }
+
+                else {
+
+                    min.innerText = 0
+
+
+                    console.log('else condition')
+                    sec.innerText = 0
+
+
+
+                }
+            }
+
+
+
+
+
+
+
+             
+            document.getElementById('durationbtn').addEventListener('click',function(){
+if(a==true){
+    a=false
+    name()
+}
+else{
+  console.log('amit')
+}
+})
+
+
+            // if(sec.innerText<10)   {
+            //         second_zero.innerText=0
+            //         console.log('add zero')
+            //         second_zero.style.display='inline'
+            //       }   
+            //       else{
+            //         second_zero.style.display='none'
+            //         console.log('remove zero')
+            //       }
+
+
+
+
+            //   if(min.innerText<1)   {
+            //     minutes_zero.innerText=0
+            // //     console.log('add zero')
+            // //    minutes_zero.style.display='inline'
+            //   }   
+            // //   else{
+            //     minutes_zero.style.display='none'
+            //     console.log('remove zero')
+            //   }
+
+
+
+//             if(music_timmer_second.innerText==0&&music_timmer_minutes.innerText==0){
+
+// music_timmer_function()
+// console.log('if')
+// }
+// else{
+//     clearInterval_function()
+//     clearInterval(myname)
+//     music_timmer_second.innerText=0
+//     music_timmer_minutes.innerText=0
+//  console.log('else')
+//  music_timmer_function()
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //  let audio=new Audio('Songs/song 1.mp3')
+
+            // let myInterval;
+
+            // let a = true
+
+
+            // document.getElementById('durationbtn').addEventListener('click', function () {
+            //     if (sec.innerText == 0 && min.innerText == 0) {
+
+            //         audio.play()
+            //         let minutes = Math.floor(audio.duration / 60)
+            //         let second = Math.floor(audio.duration - minutes * 60)
+            //         min.innerText = minutes
+            //         sec.innerText = second
+
+
+
+
+
+            //         myInterval = setInterval(() => {
+
+            //             if (second != 0) {
+            //                 second -= 1
+            //                 sec.innerText = second
+
+            //             }
+            //             else if (second == 0) {
+            //                 second = 60
+            //                 second--
+            //                 sec.innerText = second
+            //                 minutefunction()
+            //                 //  setTimeout(() => {
+
+            //                 // },500);
+
+
+
+            //             }
+
+
+            //         }, 1000);
+
+            //     }
+            //     else {
+            //         myname = setInterval(() => {
+            //             if (sec.innerText > 0) {
+
+            //                 sec.innerText--
+
+            //             }
+            //             else {
+            //                 sec.innerText = 60
+            //                 sec.innerText--
+            //                 minutefunction()
+            //             }
+
+            //             //  setTimeout(() => {
+
+            //             // },500);
+
+
+
+
+
+
+
+            //         }, 1000);
+            //         audio.play()
+            //     }
+            // })
+
+
+
+
+
+
+
+
+
+
+            // function minutefunction() {
+            //     if (minutes != 0) {
+
+            //         minutes--
+            //         console.log(minutes)
+            //         min.innerText = minutes
+            //     }
+            //     else {
+            //         minutes = 0
+
+            //         console.log('ok')
+
+            //         second = 0
+            //         sec.innerText = 0
+
+
+
+            //     }
+            // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // let pausebtn = document.getElementById('pause')
+            // pausebtn.addEventListener('click', function () {
+            //     audio.pause()
+
+            //     clearInterval(myInterval)
+            //     clearInterval(myname)
+            //     console.log(min.innerText)
+            //     console.log(sec.innerText)
+            // })
+
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        

@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+
+/* font-family: 'Varela Round', sans-serif; */
+/* font-family: 'Ubuntu', sans-serif; */
+   /* body{
+    background-color: antiquewhite;
+   } */
+ *{
+    margin: 0;
+    padding: 0;
+     font-family: 'Ubuntu', sans-serif;
+  }
+  /* CSS FOR NAVIGAION BAR */
+.header{
+    background-color: black;
+    color: white;
+  
+    position: sticky;
+  top: 0;
+ }
+
+
+ .navigation{
+    display: flex;
+ align-items: center;
+ height: 60px;
+ /* padding: 10px 0; */
+ }
+ .navigation ul{
+    display: flex;
+    text-align: center;
+ }
+ .navigation img{
+    width: 40px;
+ }
+ 
+ .navigation ul li{
+    font-size: 1rem;
+    list-style: none;
+ }
+ .navigation ul li a {
+    text-decoration: none;
+    color: white;
+    margin-left: 1.2rem;
+    font-size: 1.1rem;
+}
+
+ .logoname{
+    font-weight: bolder;
+    margin-left: 0.3rem;
+    font-size: 1.5rem;
+
+}
+
+
+ /* Css for play music in bottom */
+    
+ .container{
+    background-color: black;
+color: white;
+   width: 92vw;
+ border-radius: 10px;
+     min-height: calc( 100vh - 60px - 104px -20px);
+       background-image: url('../bg.jpg');
+       margin: 10px auto;
+       background-position:  left;
+       background-size: cover  ;
+       background-repeat: no-repeat;
+    /* padding: 15px 0 30px 0; */
+
+   
+ }
+    
+
+ .music-container{
+    
+      width: 40%;   /* margin-top: px; */
+   
+ }
+.songbox{
+  
+
+    width: 95%;
+    margin: auto auto 10px auto;
+    border-radius: 33px;
+    align-items: center;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+ 
+.songbox .cover_image{
+    width:41px;
+    border-radius: 24px;
+    margin: 2px 0;
+}
+ .small-play-button{
+    cursor: pointer;
+    width: 24px;
+ }
+ .music-container h1{
+    text-align: center;
+    font-size: 2.2rem;
+ }
+   
+ .songlist{
+      max-height: 66.8vh; ;
+    overflow:  auto;
+     margin-top: 10px;
+   
+ }
+ .songlistgif{
+   width:15%;
+   border-radius: 10px;
+  opacity: 0;
+   box-shadow: 1px 2px 0px 0px black;
+    /* transition: display 1s ease-in ; */
+    transition: all 0.4s ease-in;
+ }
+
+
+
+ .songName{
+   text-align: center;
+   font-size: 1.3rem;
+    font-weight: bold;
+
+  
+ }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* css play music in bottom */
+   .bottom{
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    color: white;
+    height: 104px;
+   
+   }
+   
+ 
+ 
+.bottom_item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    /* background-color: red; */
+    outline: 2px solid rgb(0, 0, 0);
+}
+
+ .icon img {
+    color: white;
+    width: 35px;
+    margin-left: 10px;
+    background: wheat;
+    box-shadow: 2px 2px 0px red;
+    padding: 2px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ #progressbar{
+    width: 80vw;
+    cursor: pointer;
+ }
+
+ .icon{
+    display: flex;
+    padding-top: 5px;
+ }
+
+ #gif{
+    width: 70px;
+    opacity: 0;
+    transition:opacity 0.5s ease-in;
+    
+ 
+
+ }
+ /* .gifbox{
+     position:absolute;
+     left: 10vw;
+
+      
+ } */
+ 
+#music-Timmer{
+    /* outline: 2px solid rgb(0, 255, 4); */
+    color: white;
+    /* position: absolute; */
+    /* right:15vw; */
+    font-size: 1.3rem;
+}
+
+ 
+ 
+.duration {
+    /* outline: 2px solid red; */
+    color: white;
+    /* position: relative; */
+    /* right: 43vw; */
+    /* bottom: 38px; */
+    font-size: 1.3rem;
+    margin-left: 6px;
+
+
+
+   
+}
+.mucis-name{
+   font-size: 1.3rem;
+   margin-left: 8px;
+}
+.musicnamebox{
+display: inline-block;
+   /* position: absolute; */
+   /* left: 20vw; */
+ 
+   text-align: center;
+   
+}
+ 
