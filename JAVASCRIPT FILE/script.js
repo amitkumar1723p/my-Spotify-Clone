@@ -52,7 +52,10 @@ function music_timmer_function() {
       minutes = Math.floor(Number(default_audio.duration) / 60);
       second = Math.floor(Number(default_audio.duration) - minutes * 60);
       console.log(default_audio);
+      console.log(default_audio);
       console.log(default_audio.duration);
+      console.log(typeof default_audio.duration);
+      console.log(default_audio.duration == "NaN");
       music_timmer_minutes.innerText = minutes;
       music_timmer_second.innerText = second;
     }
@@ -91,6 +94,8 @@ function durationfunction() {
       second = Math.floor(Number(default_audio.duration) - minutes * 60);
       console.log(default_audio);
       console.log(default_audio.duration);
+      console.log(typeof default_audio.duration);
+      console.log(default_audio.duration == "NaN");
       min.innerText = minutes;
       sec.innerText = second;
     }
