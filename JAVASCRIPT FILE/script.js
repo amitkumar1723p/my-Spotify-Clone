@@ -424,7 +424,6 @@ setInterval(() => {
       default_audio.src = `Songs/song ${index_value + 1}.mp3`;
       default_audio.play();
 
-      allmusicplay_btn.src = "icons/Pause button.svg";
       displaysongname.innerText = songdata[index_value].songname;
       songlistgif[index_value].style.opacity = 1;
       gif.style.opacity = 1;
@@ -434,12 +433,12 @@ setInterval(() => {
 
       default_audio.src = `Songs/song ${index_value + 1}.mp3`;
       default_audio.play();
-      allmusicplay_btn.src = "icons/Pause button.svg";
+
       displaysongname.innerText = songdata[index_value].songname;
       songlistgif[index_value].style.opacity = 1;
       gif.style.opacity = 1;
     }
-
+    allmusicplay_btn.src = "icons/Pause button.svg";
     setTimeout(() => {
       durationfunction();
 
