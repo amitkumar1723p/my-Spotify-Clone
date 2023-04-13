@@ -41,8 +41,6 @@ let music_timmer_second = document.getElementById(
 );
 let Add_zero_min = document.getElementById("Add-zero-min");
 let Add_zero_sec = document.getElementById("Add-zero-sec");
-let durationbox = document.getElementById("duration");
-let Music_Timerbox = document.getElementById("music-Timmer");
 
 sotifymusic = true;
 
@@ -50,15 +48,10 @@ let myInterval;
 
 function music_timmer_function() {
   if (default_audio) {
-    if (String(default_audio.duration) != "NaN") {
-      minutes = Math.floor(Number(default_audio.duration) / 60);
-      second = Math.floor(Number(default_audio.duration) - minutes * 60);
-
-      music_timmer_minutes.innerText = minutes;
-      music_timmer_second.innerText = second;
-    } else {
-      Music_Timerbox.innerText = "";
-    }
+    minutes = Math.floor(Number(default_audio.duration) / 60);
+    second = Math.floor(Number(default_audio.duration) - minutes * 60);
+    music_timmer_minutes.innerText = minutes;
+    music_timmer_second.innerText = second;
   }
 
   myInterval = setInterval(() => {
@@ -89,15 +82,11 @@ function clearInterval_function() {
 
 function durationfunction() {
   if (default_audio) {
-    if (String(default_audio.duration) != "NaN") {
-      minutes = Math.floor(Number(default_audio.duration) / 60);
-      second = Math.floor(Number(default_audio.duration) - minutes * 60);
+    minutes = Math.floor(Number(default_audio.duration) / 60);
+    second = Math.floor(Number(default_audio.duration) - minutes * 60);
 
-      min.innerText = minutes;
-      sec.innerText = second;
-    } else {
-      durationbox.innerText = "";
-    }
+    min.innerText = minutes;
+    sec.innerText = second;
   }
 }
 
