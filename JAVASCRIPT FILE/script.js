@@ -53,6 +53,9 @@ function music_timmer_function() {
       second = Math.floor(Number(default_audio.duration) - minutes * 60);
       music_timmer_minutes.innerText = minutes;
       music_timmer_second.innerText = second;
+    } else {
+      music_timmer_minutes.innerText = 0;
+      music_timmer_second.innerText = 0;
     }
   }
 
@@ -90,6 +93,9 @@ function durationfunction() {
 
       min.innerText = minutes;
       sec.innerText = second;
+    } else {
+      min.innerText = 0;
+      sec.innerText = 0;
     }
   }
 }
