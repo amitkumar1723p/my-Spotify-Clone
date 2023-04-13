@@ -57,7 +57,7 @@ function music_timmer_function() {
       music_timmer_minutes.innerText = minutes;
       music_timmer_second.innerText = second;
     } else {
-      Music_Timerbox = "";
+      Music_Timerbox.innerText = "";
     }
   }
 
@@ -96,7 +96,7 @@ function durationfunction() {
       min.innerText = minutes;
       sec.innerText = second;
     } else {
-      durationbox = "";
+      durationbox.innerText = "";
     }
   }
 }
