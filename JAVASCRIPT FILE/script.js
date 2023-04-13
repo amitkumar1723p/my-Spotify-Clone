@@ -47,10 +47,14 @@ sotifymusic = true;
 let myInterval;
 
 function music_timmer_function() {
-  minutes = Math.floor(default_audio.duration / 60);
-  second = Math.floor(default_audio.duration - minutes * 60);
-  music_timmer_minutes.innerText = minutes;
-  music_timmer_second.innerText = second;
+  if (default_audio) {
+    minutes = Math.floor(default_audio.duration / 60);
+    second = Math.floor(default_audio.duration - minutes * 60);
+    console.log(default_audio);
+    console.log(default_audio.duration);
+    music_timmer_minutes.innerText = minutes;
+    music_timmer_second.innerText = second;
+  }
 
   myInterval = setInterval(() => {
     if (music_timmer_second.innerText > 0) {
@@ -82,7 +86,8 @@ function durationfunction() {
   if (default_audio) {
     minutes = Math.floor(default_audio.duration / 60);
     second = Math.floor(default_audio.duration - minutes * 60);
-
+    console.log(default_audio);
+    console.log(default_audio.duration);
     min.innerText = minutes;
     sec.innerText = second;
   }
