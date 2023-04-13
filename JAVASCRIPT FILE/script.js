@@ -35,40 +35,37 @@ Array.from(songbox).forEach(function (element, index) {
 let default_audio = new Audio("Songs/song 1.mp3")
 
 //    default_audio.play()
-let index_value = 0
-
+let index_value = 0;
+console.log(index_value);
 
 //    ALL HTML Element
-let gif = document.getElementById('gif')
-let progressbar = document.getElementById('progressbar')
-let small_play_btn = document.getElementsByClassName('small-play-button')
-let songlistgif = document.getElementsByClassName('songlistgif')
-let displaysongname = document.getElementsByClassName('mucis-name')[0]
-console.log(displaysongname)
-let duration = document.querySelector('.duration')
-let min = document.querySelector('.minues')
-let sec = document.querySelector('.second')
-let minutes_zero = document.getElementById('minutes_zero')
-let second_zero = document.getElementById('second_zero')
-let music_timmer = document.getElementById('music-Timmer')
-let music_timmer_minutes = document.getElementById('music-timmer-minutes')
-let music_timmer_second = document.getElementById('music-timmer-second-seconds')
-let  Add_zero_min=document.getElementById('Add-zero-min')
-let Add_zero_sec=document.getElementById('Add-zero-sec')
- 
-sotifymusic=true
+let gif = document.getElementById("gif");
+let progressbar = document.getElementById("progressbar");
+let small_play_btn = document.getElementsByClassName("small-play-button");
+let songlistgif = document.getElementsByClassName("songlistgif");
+let displaysongname = document.getElementsByClassName("mucis-name")[0];
+let min = document.querySelector(".minues");
+let sec = document.querySelector(".second");
+let minutes_zero = document.getElementById("minutes_zero");
+let second_zero = document.getElementById("second_zero");
+let music_timmer = document.getElementById("music-Timmer");
+let music_timmer_minutes = document.getElementById("music-timmer-minutes");
+let music_timmer_second = document.getElementById(
+  "music-timmer-second-seconds"
+);
+let Add_zero_min = document.getElementById("Add-zero-min");
+let Add_zero_sec = document.getElementById("Add-zero-sec");
 
-
+sotifymusic = true;
 
   let myInterval;
 
 function music_timmer_function() {
-  setTimeout(() => {
-    minutes = Math.floor(default_audio.duration / 60);
-    second = Math.floor(default_audio.duration - minutes * 60);
-    music_timmer_minutes.innerText = minutes;
-    music_timmer_second.innerText = second;
-  }, 200);
+  minutes = Math.floor(default_audio.duration / 60);
+  second = Math.floor(default_audio.duration - minutes * 60);
+  music_timmer_minutes.innerText = minutes;
+  music_timmer_second.innerText = second;
+  console.log(default_audio);
 
   myInterval = setInterval(() => {
     if (music_timmer_second.innerText > 0) {
@@ -149,53 +146,39 @@ function clearInterval_function(){
 
   
 function durationfunction() {
-  setTimeout(() => {
-    minutes = Math.floor(default_audio.duration / 60);
-    second = Math.floor(default_audio.duration - minutes * 60);
-    min.innerText = minutes;
-    sec.innerText = second;
-  }, 200);
+  minutes = Math.floor(default_audio.duration / 60);
+  second = Math.floor(default_audio.duration - minutes * 60);
+  console.log(default_audio);
+  min.innerText = minutes;
+  sec.innerText = second;
 }
 
 
 let myname;
-let allmusicplay_btn = document.getElementById('allmusicplay_btn')
-allmusicplay_btn.addEventListener('click', function () {
-    if (default_audio.paused || default_audio.currentTime == 0) {
-        default_audio.play()
+let allmusicplay_btn = document.getElementById("allmusicplay_btn");
+allmusicplay_btn.addEventListener("click", function () {
+  if (default_audio.paused || default_audio.currentTime == 0) {
+    default_audio.play();
+    durationfunction();
 
-        durationfunction()
-    
-         if(  music_timmer_minutes.innerText == 0&& music_timmer_second.innerText == 0){
-             music_timmer_function()
-
-
-
- 
-         }
-         else{
-             setTimeout(() => {
-                music_timmer-second.innerText-1
-                 myname = setInterval(() => {
-                     if (music_timmer_second.innerText > 0) {
-                         
-                         music_timmer_second.innerText --
-                         
-                         
-                        }
-                        else {
-                            
-                            music_timmer_second.innerText  = 59
-                            music_timmer_second.innerText --
-                            minutefunction2()
-                        }
-                        
-                    }, 1000);
-                    
-                },5);
-            
-
-
+    if (
+      music_timmer_minutes.innerText == 0 &&
+      music_timmer_second.innerText == 0
+    ) {
+      music_timmer_function();
+    } else {
+      setTimeout(() => {
+        music_timmer - second.innerText - 1;
+        myname = setInterval(() => {
+          if (music_timmer_second.innerText > 0) {
+            music_timmer_second.innerText--;
+          } else {
+            music_timmer_second.innerText = 59;
+            music_timmer_second.innerText--;
+            minutefunction2();
+          }
+        }, 1000);
+      }, 5);
 
             function minutefunction2() {
                 if (music_timmer_minutes.innerText!= 0) {
@@ -274,49 +257,40 @@ allmusicplay_btn.addEventListener('click', function () {
 })
 
 //  addEventListener timaeupdate
-default_audio.addEventListener('timeupdate', function () {
+default_audio.addEventListener("timeupdate", function () {
+  let progressbarvalue =
+    (default_audio.currentTime / default_audio.duration) * 100;
+  progressbarvalue = parseInt(progressbarvalue);
 
+  progressbar.value = progressbarvalue;
+});
 
-    let progressbarvalue = (default_audio.currentTime / default_audio.duration) * 100
-    progressbarvalue = parseInt(progressbarvalue)
+progressbar.addEventListener("change", function () {
+  if (min.innerText != 0 && sec.innerText != 0) {
+    default_audio.currentTime =
+      (progressbar.value * default_audio.duration) / 100;
 
-    progressbar.value = progressbarvalue
+    default_audio.currentTime = parseInt(default_audio.currentTime);
 
-})
- 
-progressbar.addEventListener('change', function () {
-    if(min.innerText!=0 &&sec.innerText!=0){
+    music_timmer_minutes.innerText = 0;
+    music_timmer_second.innerText = 0;
+    let duration = Math.floor(default_audio.duration);
+    let currentTime = Math.floor(default_audio.currentTime);
+    let progressbar_End_value = duration - currentTime;
 
-        default_audio.currentTime = (progressbar.value * default_audio.duration) / 100
-        
-        default_audio.currentTime=parseInt(default_audio.currentTime)
-       
-             
-            music_timmer_minutes.innerText=0
-            music_timmer_second.innerText=0
-            let duration= Math.floor(default_audio.duration)
-            let currentTime=Math.floor(default_audio.currentTime)     
-            console.log(duration,currentTime)
-            let progressbar_End_value=duration-currentTime
-            let minues=Math.floor(progressbar_End_value/60)
-            let second=Math.floor(progressbar_End_value-minues*60)
-          
-           
-            music_timmer_second.innerText=second
-            music_timmer_minutes.innerText=minues
-            setInterval(() => {
-                
-           if(second>0){
-               second--
- 
-        
-        
-    }
-    else{ 
-        second=59
-        minutesfunction3()
-    }
-}, 1000);
+    let minues = Math.floor(progressbar_End_value / 60);
+    let second = Math.floor(progressbar_End_value - minues * 60);
+
+    music_timmer_second.innerText = second;
+    music_timmer_minutes.innerText = minues;
+    setInterval(() => {
+      if (second > 0) {
+        second--;
+      } else {
+        second = 59;
+        minutesfunction3();
+      }
+    }, 1000);
 
 function minutesfunction3() {
     if (minues!= 0) {
@@ -462,105 +436,63 @@ next_button.addEventListener('click', function () {
 
         default_audio.src = `Songs/song ${index_value + 1}.mp3`
 
-        default_audio.play()
-        setTimeout(() => {
+    default_audio.src = `Songs/song ${index_value + 1}.mp3`;
+    console.log(index_value);
+    default_audio.play();
+    setTimeout(() => {
+      durationfunction();
 
-            durationfunction()
-            
+      if (
+        music_timmer_second.innerText == 0 &&
+        music_timmer_minutes.innerText == 0
+      ) {
+        music_timmer_function();
+      } else {
+        clearInterval_function();
+        clearInterval(myname);
+        music_timmer_second.innerText = 0;
+        music_timmer_minutes.innerText = 0;
+        music_timmer_function();
+      }
+    }, 150);
+    arr[index_value].src = "icons/Pause button.svg";
+    setTimeout(() => {
+      arr[index_value].src = "icons/playbutton.svg";
+    }, 500);
+    allmusicplay_btn.src = "icons/Pause button.svg";
 
+    gif.style.opacity = 1;
+    songlistgif[index_value].style.opacity = 1;
+    displaysongname.innerText = songdata[index_value].songname;
+  } else {
+    amit();
+    index_value += 1;
 
-            if(music_timmer_second.innerText==0&&music_timmer_minutes.innerText==0){
+    default_audio.src = `Songs/song ${index_value + 1}.mp3`;
 
-                music_timmer_function()
-     console.log('if')
-            }
-                else{
-                    clearInterval_function()
-                    clearInterval(myname)
-                    music_timmer_second.innerText=0
-                    music_timmer_minutes.innerText=0
-                 console.log('else')
-                 music_timmer_function()
+    default_audio.play();
+    setTimeout(() => {
+      durationfunction();
 
-                }
+      if (
+        music_timmer_second.innerText == 0 &&
+        music_timmer_minutes.innerText == 0
+      ) {
+        music_timmer_function();
+      } else {
+        clearInterval_function();
+        clearInterval(myname);
+        music_timmer_second.innerText = 0;
+        music_timmer_minutes.innerText = 0;
+        music_timmer_function();
+      }
+    }, 150);
 
-
-
-
-
-
-
-
-
-
-
-
-        }, 150);
-        arr[index_value].src = 'icons/Pause button.svg'
-        setTimeout(() => {
-            arr[index_value].src = 'icons/playbutton.svg'
-
-        }, 500);
-        allmusicplay_btn.src = 'icons/Pause button.svg'
-
-        gif.style.opacity = 1
-        songlistgif[index_value].style.opacity = 1
-        displaysongname.innerText = songdata[index_value].songname
-
-    }
-    else {
-
-        amit()
-        index_value += 1
-
-        console.log(index_value)
-        default_audio.src = `Songs/song ${index_value + 1}.mp3`
-
-        default_audio.play()
-        setTimeout(() => {
-            durationfunction()
-          
-  
-
-            if(music_timmer_second.innerText==0&&music_timmer_minutes.innerText==0){
-
-                music_timmer_function()
-     console.log('if')
-            }
-                else{
-                    clearInterval_function()
-                    clearInterval(myname)
-                    music_timmer_second.innerText=0
-                    music_timmer_minutes.innerText=0
-                 console.log('else')
-                 music_timmer_function()
-                 
-
-                }
-
-
-
-
-
-
-        }, 150);
-        let myvar = String(default_audio.duration)
-        console.log(typeof (myvar))
-        console.log(myvar)
-
-
-        arr[index_value].src = 'icons/Pause button.svg'
-        setTimeout(() => {
-            arr[index_value].src = 'icons/playbutton.svg'
-
-        }, 500);
-        allmusicplay_btn.src = 'icons/Pause button.svg'
-
-
-        gif.style.opacity = 1
-        songlistgif[index_value].style.opacity = 1
-        displaysongname.innerText = songdata[index_value].songname
-
+    arr[index_value].src = "icons/Pause button.svg";
+    setTimeout(() => {
+      arr[index_value].src = "icons/playbutton.svg";
+    }, 500);
+    allmusicplay_btn.src = "icons/Pause button.svg";
 
     }
 })
@@ -630,31 +562,26 @@ previous_button.addEventListener('click', function () {
         console.log('else condtio')
 
 
-        console.log('else condition')
-        console.log(index_value)
-        let a = default_audio.src = `Songs/song ${index_value + 1}.mp3`
-        default_audio.play()
-        setTimeout(() => {
-            durationfunction()
-            if(music_timmer_second.innerText==0&&music_timmer_minutes.innerText==0){
-
-                music_timmer_function()
-     console.log('if')
-            }
-                else{
-                    clearInterval_function()
-                    clearInterval(myname)
-                    music_timmer_second.innerText=0
-                    music_timmer_minutes.innerText=0
-                 console.log('else')
-                 music_timmer_function()
-                }
-
-
-
-
-
-        }, 150);
+    index_value -= 1;
+    // console.log(index_value + 1);
+    default_audio.src = `Songs/song ${index_value + 1}.mp3`;
+    console.log(index_value);
+    default_audio.play();
+    setTimeout(() => {
+      durationfunction();
+      if (
+        music_timmer_second.innerText == 0 &&
+        music_timmer_minutes.innerText == 0
+      ) {
+        music_timmer_function();
+      } else {
+        clearInterval_function();
+        clearInterval(myname);
+        music_timmer_second.innerText = 0;
+        music_timmer_minutes.innerText = 0;
+        music_timmer_function();
+      }
+    }, 150);
 
         console.log(index_value)
         arr[index_value].src = 'icons/Pause button.svg'
@@ -777,66 +704,20 @@ setInterval(() => {
 
 
     setTimeout(() => {
+      durationfunction();
 
-        durationfunction()
-        
-
-
-        if(music_timmer_second.innerText==0&&music_timmer_minutes.innerText==0){
-
- 
- console.log(music_timmer_minutes)
- console.log(music_timmer_minutes)
-
- minutes = Math.floor(default_audio.duration / 60)
- second = Math.floor(default_audio.duration - minutes * 60)
- music_timmer_minutes.innerText = minutes
- music_timmer_second.innerText = second
-
-
-}
-
-
-}, 200);
-
-
-
-
-}
-
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-      
-      
-              
-        
-      
-
-
-         
-    
-},1000);
-
-
-
-   
-
-
-
-
+      if (
+        music_timmer_second.innerText == 0 &&
+        music_timmer_minutes.innerText == 0
+      ) {
+        minutes = Math.floor(default_audio.duration / 60);
+        second = Math.floor(default_audio.duration - minutes * 60);
+        music_timmer_minutes.innerText = minutes;
+        music_timmer_second.innerText = second;
+      }
+    }, 200);
+  }
+}, 1000);
 
 // Add zerro in timmer minutes and second
 
