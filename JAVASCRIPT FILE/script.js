@@ -91,9 +91,7 @@ let allmusicplay_btn = document.getElementById("allmusicplay_btn");
 allmusicplay_btn.addEventListener("click", function () {
   if (default_audio.paused || default_audio.currentTime == 0) {
     default_audio.play();
-    setTimeout(() => {
-      durationfunction();
-    }, 150);
+    durationfunction();
 
     if (
       music_timmer_minutes.innerText == 0 &&
