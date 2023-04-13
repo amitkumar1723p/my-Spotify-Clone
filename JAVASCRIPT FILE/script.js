@@ -48,7 +48,7 @@ let myInterval;
 
 function music_timmer_function() {
   if (default_audio) {
-    if (default_audio.duration !== "NaN") {
+    if (default_audio.duration != "NaN") {
       minutes = Math.floor(Number(default_audio.duration) / 60);
       second = Math.floor(Number(default_audio.duration) - minutes * 60);
       console.log(default_audio);
@@ -86,7 +86,7 @@ function clearInterval_function() {
 
 function durationfunction() {
   if (default_audio) {
-    if (default_audio.duration !== "NaN") {
+    if (default_audio.duration != "NaN") {
       minutes = Math.floor(Number(default_audio.duration) / 60);
       second = Math.floor(Number(default_audio.duration) - minutes * 60);
       console.log(default_audio);
