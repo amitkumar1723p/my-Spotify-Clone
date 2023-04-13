@@ -57,8 +57,8 @@ function music_timmer_function() {
     } else {
       music_timmer_minutes.innerText = "";
       music_timmer_second.innerText = "";
-      second = 0;
-      minutes = 0;
+      //   second = 0;
+      //   minutes = 0;
     }
   }
 
@@ -99,8 +99,8 @@ function durationfunction() {
     } else {
       min.innerText = "";
       sec.innerText = "";
-      second = 0;
-      minutes = 0;
+      //   second = 0;
+      //   minutes = 0;
     }
   }
 }
