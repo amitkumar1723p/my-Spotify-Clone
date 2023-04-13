@@ -79,11 +79,13 @@ function clearInterval_function() {
 }
 
 function durationfunction() {
-  minutes = Math.floor(default_audio.duration / 60);
-  second = Math.floor(default_audio.duration - minutes * 60);
+  if (default_audio) {
+    minutes = Math.floor(default_audio.duration / 60);
+    second = Math.floor(default_audio.duration - minutes * 60);
 
-  min.innerText = minutes;
-  sec.innerText = second;
+    min.innerText = minutes;
+    sec.innerText = second;
+  }
 }
 
 let myname;
@@ -440,10 +442,12 @@ setInterval(() => {
         music_timmer_second.innerText == 0 &&
         music_timmer_minutes.innerText == 0
       ) {
-        minutes = Math.floor(default_audio.duration / 60);
-        second = Math.floor(default_audio.duration - minutes * 60);
-        music_timmer_minutes.innerText = minutes;
-        music_timmer_second.innerText = second;
+        if (default_audio) {
+          minutes = Math.floor(default_audio.duration / 60);
+          second = Math.floor(default_audio.duration - minutes * 60);
+          music_timmer_minutes.innerText = minutes;
+          music_timmer_second.innerText = second;
+        }
       }
     }, 200);
   }
