@@ -54,6 +54,11 @@ function music_timmer_function() {
 
       music_timmer_minutes.innerText = minutes;
       music_timmer_second.innerText = second;
+    } else {
+      music_timmer_minutes.innerText = "";
+      music_timmer_second.innerText = "";
+      second = 0;
+      minutes = 0;
     }
   }
 
@@ -91,6 +96,11 @@ function durationfunction() {
 
       min.innerText = minutes;
       sec.innerText = second;
+    } else {
+      min.innerText = "";
+      sec.innerText = "";
+      second = 0;
+      minutes = 0;
     }
   }
 }
