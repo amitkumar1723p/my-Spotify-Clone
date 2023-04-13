@@ -31,7 +31,7 @@
 
 
 
-        width: 97vw;
+        /* width: 97vw; */
         background-size: 100%;
         background-position: bottom;
 
@@ -109,7 +109,7 @@
 
 
     .container {
-        width: 97vw;
+        /* width: 97vw; */
         background-image: none;
         background-color: black;
 
@@ -224,7 +224,7 @@
         text-align: center;
     }
 
- 
+
 
 
 
@@ -294,11 +294,12 @@
     }
 
     .songName {
-        
+
         font-size: .9rem;
-    padding: 0px 0px;
-    font-weight: bolder;
+        padding: 0px 0px;
+        font-weight: bolder;
     }
+
     .songbox .cover_image {
         width: 9%;
     }
@@ -342,7 +343,7 @@
         width: 0;
     }
 
- 
+
     .header {
         padding: 20px 0px;
         background: rgb(64, 149, 228);
@@ -357,22 +358,24 @@
         top: 10px;
 
     }
-   .navigation{
-  
-    display: none;
-   
-    margin-top: 25px;
-    flex-direction: column;
-  
-   }
+
+    .navigation {
+
+        display: none;
+
+        margin-top: 25px;
+        flex-direction: column;
+
+    }
+
     .res-navigation {
-         display: flex;
-       
-         height: 150px;
-    
-        
-        transition:  all 0.2s ease-in;
-        
+        display: flex;
+
+        height: 65px;
+
+
+        transition: all 0.2s ease-in;
+
     }
 
     .navigation_button div {
@@ -389,16 +392,17 @@
         text-align: center;
         flex-direction: column;
     }
- 
 
 
-    .navigation ul li a{
+
+    .navigation ul li a {
         margin: 5px auto
     }
+
     .container {
-        width: 97vw;
+
         background-image: none;
         background-color: black;
-        min-height: calc( 100vh - 104px - 20px);
+        min-height: calc(100vh - 104px - 20px);
     }
 }
