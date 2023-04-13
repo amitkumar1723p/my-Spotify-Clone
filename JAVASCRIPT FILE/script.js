@@ -41,6 +41,8 @@ let music_timmer_second = document.getElementById(
 );
 let Add_zero_min = document.getElementById("Add-zero-min");
 let Add_zero_sec = document.getElementById("Add-zero-sec");
+let durationbox = document.getElementById("duration");
+let Music_Timerbox = document.getElementById("music-Timmer");
 
 sotifymusic = true;
 
@@ -55,10 +57,7 @@ function music_timmer_function() {
       music_timmer_minutes.innerText = minutes;
       music_timmer_second.innerText = second;
     } else {
-      music_timmer_minutes.innerText = "";
-      music_timmer_second.innerText = "";
-      //   second = 0;
-      //   minutes = 0;
+      Music_Timerbox = "";
     }
   }
 
@@ -97,10 +96,7 @@ function durationfunction() {
       min.innerText = minutes;
       sec.innerText = second;
     } else {
-      min.innerText = "";
-      sec.innerText = "";
-      //   second = 0;
-      //   minutes = 0;
+      durationbox = "";
     }
   }
 }
