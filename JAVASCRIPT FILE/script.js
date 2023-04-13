@@ -55,7 +55,7 @@ function music_timmer_function() {
       console.log(default_audio);
       console.log(default_audio.duration);
       console.log(typeof default_audio.duration);
-      console.log(default_audio.duration == "NaN");
+      console.log(default_audio.duration == Number("NaN"));
       music_timmer_minutes.innerText = minutes;
       music_timmer_second.innerText = second;
     }
@@ -95,7 +95,7 @@ function durationfunction() {
       console.log(default_audio);
       console.log(default_audio.duration);
       console.log(typeof default_audio.duration);
-      console.log(default_audio.duration == "NaN");
+      console.log(default_audio.duration == Number("NaN"));
       min.innerText = minutes;
       sec.innerText = second;
     }
