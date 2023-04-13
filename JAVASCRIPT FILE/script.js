@@ -48,12 +48,14 @@ let myInterval;
 
 function music_timmer_function() {
   if (default_audio) {
-    minutes = Math.floor(Number(default_audio.duration) / 60);
-    second = Math.floor(Number(default_audio.duration) - minutes * 60);
-    console.log(default_audio);
-    console.log(default_audio.duration);
-    music_timmer_minutes.innerText = minutes;
-    music_timmer_second.innerText = second;
+    if (default_audio.duration !== "NaN") {
+      minutes = Math.floor(Number(default_audio.duration) / 60);
+      second = Math.floor(Number(default_audio.duration) - minutes * 60);
+      console.log(default_audio);
+      console.log(default_audio.duration);
+      music_timmer_minutes.innerText = minutes;
+      music_timmer_second.innerText = second;
+    }
   }
 
   myInterval = setInterval(() => {
@@ -84,12 +86,14 @@ function clearInterval_function() {
 
 function durationfunction() {
   if (default_audio) {
-    minutes = Math.floor(Number(default_audio.duration) / 60);
-    second = Math.floor(Number(default_audio.duration) - minutes * 60);
-    console.log(default_audio);
-    console.log(default_audio.duration);
-    min.innerText = minutes;
-    sec.innerText = second;
+    if (default_audio.duration !== "NaN") {
+      minutes = Math.floor(Number(default_audio.duration) / 60);
+      second = Math.floor(Number(default_audio.duration) - minutes * 60);
+      console.log(default_audio);
+      console.log(default_audio.duration);
+      min.innerText = minutes;
+      sec.innerText = second;
+    }
   }
 }
 
